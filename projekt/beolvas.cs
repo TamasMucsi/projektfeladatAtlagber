@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,10 +23,47 @@ namespace projekt
             ev = Convert.ToInt32(darabol[0]);
             minimalber = Convert.ToInt32(darabol[1]);
             bruttoatlagjovedelem = Convert.ToInt32(darabol[2]);
-            benzin86 = Convert.ToDouble(darabol[3]);
-            benzin91 = Convert.ToDouble(darabol[4]);
-            benzin92 = Convert.ToDouble(darabol[5]);
-            benzin95 = Convert.ToDouble(darabol[6]);
+            if (darabol[3] != "")
+            {
+                benzin86 = Convert.ToDouble(darabol[3]);
+            }
+            else 
+            {
+                benzin86 = 0;
+            }
+
+
+
+            if (darabol[4] != "")
+            {
+                benzin91 = Convert.ToDouble(darabol[4]);
+            }
+            else
+            {
+                benzin91 = 0;
+            }
+
+            if (darabol[5] != "")
+            {
+                benzin92 = Convert.ToDouble(darabol[5]);
+            }
+            else
+            {
+                benzin92 = 0;
+            }
+
+            if (darabol[6] != "")
+            {
+                benzin95 = Convert.ToDouble(darabol[6]);
+            }
+            else
+            {
+                benzin95 = 0;
+            }
+
+
+
+            
             gazolaj = Convert.ToDouble(darabol[7]);
         }
 

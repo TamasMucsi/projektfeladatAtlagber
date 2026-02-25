@@ -17,10 +17,71 @@ namespace projekt
             while (!sr.EndOfStream) {
              Adatok.Add(new beolvas(sr.ReadLine()));
             }
+             //2. feladat Mucsi Tamás
+            Console.WriteLine($"2. feladat: Összesen {Adatok.Count()} év adatait tartalmazza a lista");
 
 
 
 
+            //4. feladat Mucsi Tamás
+
+            int szamlalo = 0;
+
+            foreach (var item in Adatok)
+            {
+                if (item.benzin92 != 0) {
+                szamlalo++;
+                }
+            }
+            Console.WriteLine($"4. feladat: {szamlalo} évig volt elérhető a 92-es üzemanyag");
+
+
+
+
+            //6. feladat Mucsi Tamás
+            var rendezett = Adatok.OrderBy(x => x.ev).ToList();
+            Console.WriteLine($"6. feladat\n" +
+                $"\tMinimálbérből {Math.Round((Adatok.First().minimalber/Adatok.First().gazolaj),2)} liter gázolajat lehetett vásárolni\n" +
+                $"\tÁtlagbérből {Math.Round((Adatok.First().bruttoatlagjovedelem / Adatok.First().benzin86), 2)} liter 86-ost vagy {Math.Round((Adatok.First().bruttoatlagjovedelem / Adatok.First().benzin92), 2)} liter 92-est vagy {Math.Round((Adatok.First().bruttoatlagjovedelem / Adatok.First().gazolaj), 2)} liter gázolajat lehetett vásárolni\n" +
+                $"\tA minimálbér {Adatok.First().ev}-ben az átlagbér {Math.Round((Convert.ToDouble(Adatok.First().minimalber) / Convert.ToDouble(Adatok.First().bruttoatlagjovedelem)), 2) * 100}%-a volt");
+
+
+
+            //8. feladat Mucsi Tamás
+            Console.WriteLine("8. feladat:");
+            foreach (var item in rendezett)
+            {
+                if (item.benzin95 != 0)
+                {
+                    if (item.gazolaj > item.benzin95)
+                    {
+                        Console.WriteLine($"\t{item.ev} évben volt drágább a gázolaj");
+                    }
+                }
+            }
+
+
+            //10 feladat
+
+            int ev = 0;
+            double kulonbseg = 100;
+            foreach (var item in Adatok)
+            {
+                if (item.benzin95 != 0)
+                {
+
+                    if ((item.benzin95 - item.gazolaj < kulonbseg) && (item.benzin95 > item.gazolaj))
+                    {
+                        ev = item.ev;
+                        kulonbseg = item.benzin95 - item.gazolaj;
+                    }
+                }
+            }
+            Console.WriteLine($"10. feladat: A legkisebb különbség éve: {ev}, a különbség: {Math.Round(kulonbseg,2)} Ft");
+
+
+
+            Console.ReadKey();
         }
     }
 }

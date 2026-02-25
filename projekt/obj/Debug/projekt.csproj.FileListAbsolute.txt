@@ -1,0 +1,8 @@
+C:\Users\mucsi.tamas\Source\Repos\projektfeladatAtlagber\projekt\bin\Debug\projekt.exe.config
+C:\Users\mucsi.tamas\Source\Repos\projektfeladatAtlagber\projekt\bin\Debug\projekt.exe
+C:\Users\mucsi.tamas\Source\Repos\projektfeladatAtlagber\projekt\bin\Debug\projekt.pdb
+C:\Users\mucsi.tamas\Source\Repos\projektfeladatAtlagber\projekt\obj\Debug\projekt.csproj.AssemblyReference.cache
+C:\Users\mucsi.tamas\Source\Repos\projektfeladatAtlagber\projekt\obj\Debug\projekt.csproj.CoreCompileInputs.cache
+C:\Users\mucsi.tamas\Source\Repos\projektfeladatAtlagber\projekt\obj\Debug\projekt.exe
+C:\Users\mucsi.tamas\Source\Repos\projektfeladatAtlagber\projekt\obj\Debug\projekt.pdb
+C:\Users\mucsi.tamas\Source\Repos\projektfeladatAtlagber\projekt\obj\Debug\projekt.exe.config

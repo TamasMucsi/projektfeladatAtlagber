@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,6 +58,29 @@ namespace projekt
                         Console.WriteLine($"\t{item.ev} évben volt drágább a gázolaj");
                     }
                 }
+            }
+
+            // 9. feladat Popány Dávid
+            Console.WriteLine("9. feladat:");
+            double elozoev_g = Adatok[0].gazolaj;
+            foreach (var item in Adatok)
+            {
+                if (item.gazolaj < elozoev_g)
+                {
+                    Console.WriteLine($"\t{item.ev}-ben csökkent a gázolaj ára.");
+                    
+                }
+                elozoev_g = item.gazolaj;
+            }
+            double elozoev_b = Adatok[0].benzin95;
+            foreach (var item in Adatok)
+            {
+                if (item.benzin95 < elozoev_b)
+                {
+                    Console.WriteLine($"\t{item.ev}-ben csökkent a 95-ös benzin ára.");
+
+                }
+                elozoev_b = item.benzin95;
             }
 
 
